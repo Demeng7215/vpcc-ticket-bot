@@ -12,7 +12,7 @@ public class Main {
   public static void main(String[] args) throws InterruptedException {
 
     JDA jda = JDABuilder.createDefault(TOKEN)
-        .addEventListeners(new CommandEvent(), new ButtonListener())
+        .addEventListeners(new CommandListener(), new ButtonListener())
         .build().awaitReady();
 
     jda.upsertCommand("ping", "Pings the bot.").queue();
